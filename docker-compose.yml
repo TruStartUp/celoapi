@@ -1,0 +1,11 @@
+version: "3"
+services:
+  api:
+    build: .
+    container_name: api-certificates
+    volumes:
+      - ./ssl-api/:/etc/ssl/:ro
+    ports:
+    - "10443:10443"
+    env_file:
+    - .env

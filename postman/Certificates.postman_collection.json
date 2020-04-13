@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "0ac47d80-be72-42df-8abe-730ba4e8e9e5",
+		"name": "Certificates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"amrendonsa@unal.edu.co\",\n\t\"password\": \"123123123\"\n}"
+				},
+				"url": {
+					"raw": "{{BasePath}}/login",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login a user with credentials"
+			},
+			"response": []
+		},
+		{
+			"name": "Certificate a student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcmVuZG9uc2FAdW5hbC5lZHUuY28iLCJpYXQiOjE1NDc0MDU4MDQsImV4cCI6MTU0ODAxMDYwNH0.aLsHKNxIax7Mqd5Ps4hQJw3DdAUrQRpnDFV0FdXxpx0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\": \"CC 9976639\",\n\t\"studentName\": \"Angel Rendon\",\n\t\"studentEmail\": \"amrendonsa@unal.edu.co\",\n\t\"courseId\": \"12334\",\n\t\"courseName\": \"Desarrollo de contratos inteligentes con Solidity\",\n\t\"courseStartDate\": \"2019-01-01\",\n\t\"courseFinishDate\": \"2019-02-01\"\n}"
+				},
+				"url": {
+					"raw": "{{BasePath}}/certifications",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"certifications"
+					]
+				},
+				"description": "Certifies a student with the course given information"
+			},
+			"response": []
+		},
+		{
+			"name": "Token validation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtcmVuZG9uc2FAdW5hbC5lZHUuY28iLCJpYXQiOjE1NDc0MDgyMzAsImV4cCI6MTU0ODAxMzAzMH0.lairsnwhTb_4hOXAPzMl6VUFgyDzzTroEZml5yOtdkE\"\n}"
+				},
+				"url": {
+					"raw": "{{BasePath}}/token",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"token"
+					]
+				},
+				"description": "Determines if a given token is still valid or not."
+			},
+			"response": []
+		},
+		{
+			"name": "Validate via hashes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BasePath}}/validate?type=link&hash=6b4a65a3f174b9a668098514a2616676159bb226936a86c1b7a7e40c75c55b8c",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"validate"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "ipfs",
+							"disabled": true
+						},
+						{
+							"key": "type",
+							"value": "link"
+						},
+						{
+							"key": "hash",
+							"value": "6b4a65a3f174b9a668098514a2616676159bb226936a86c1b7a7e40c75c55b8c"
+						}
+					]
+				},
+				"description": "This tool is able to validate via two hashes: IPFS and another called link.\n\nTo test, set the type to either `ipfs` or `link` on the params form."
+			},
+			"response": []
+		},
+		{
+			"name": "Validate via file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BasePath}}/validate",
+					"host": [
+						"{{BasePath}}"
+					],
+					"path": [
+						"validate"
+					]
+				},
+				"description": "You must upload the certification PDF and you'll get the summary of the certification"
+			},
+			"response": []
+		}
+	]
+}
