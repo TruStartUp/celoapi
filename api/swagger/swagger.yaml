@@ -1,0 +1,79 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: Celo app API
+  description: Celo App on Blockchain API documentation and test
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths
+basePath: /
+#
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /scText:
+    x-swagger-router-controller: sc
+    get:
+      tags:
+        - SC
+      summary: Returns the text on SC contract
+      description:  Returns the text on SC contract
+      operationId: getText
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        200:
+          description: text returned
+    post:
+      tags:
+        - SC
+      summary: Allows to add text to SC contract
+      description: Returns transaction hash after sending a Text.
+      operationId: write
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: Text
+          description: the text
+          schema:
+            $ref: "#/definitions/Text"
+      responses:
+        201:
+          description: text successfully sent
+        500:
+          description: Internal Server Error
+  
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  Message:
+    type: object
+    required:
+      - message
+      - address
+    properties:
+      message:
+        type: string
+      address:
+        type: string
+  Text:
+    type: object
+    required:
+      - text
+    properties:
+      text:
+        type: string
