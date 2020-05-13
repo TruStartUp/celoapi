@@ -14,6 +14,7 @@
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
+    "@celo/contractkit": "^0.4.1",
     "D": "^1.0.0",
     "babel-plugin-istanbul": "^5.1.0",
     "babel-preset-env": "^1.7.0",
@@ -54,6 +55,7 @@
     "chai-fs": "^2.0.0",
     "chai-http": "^4.2.0",
     "cross-env": "^5.2.0",
+    "ganache-snapshot": "^1.0.1",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "sinon": "^7.2.2"

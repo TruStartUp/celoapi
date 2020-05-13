@@ -16,7 +16,7 @@ class SmartContract {
   constructor(contract, address) {
     this.contract = contract;
     this.address = address;
-    this.kit = newKit('https://alfajores-forno.celo-testnet.org:8545');
+    this.kit = newKit(host);
     this.web3 = this.kit.web3;
     this.instance = new this.web3.eth.Contract(contract.abi, address, {gasLimit: 5000000, ...from});
   }
