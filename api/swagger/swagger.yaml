@@ -60,16 +60,6 @@ paths:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
 definitions:
-  Message:
-    type: object
-    required:
-      - message
-      - address
-    properties:
-      message:
-        type: string
-      address:
-        type: string
   Text:
     type: object
     required:
