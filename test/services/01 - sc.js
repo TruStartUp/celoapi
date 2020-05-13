@@ -7,7 +7,7 @@ config();
 
 const scService = new SCService();
 
-describe('Service: Procurement',() =>{
+describe('Service: SC',() =>{
   it(' SC contract should be initialized', () => {
     return expect(scService.SCContract).to.be.instanceOf(SmartContract)
   });
