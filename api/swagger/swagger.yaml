@@ -55,7 +55,32 @@ paths:
           description: text successfully sent
         500:
           description: Internal Server Error
-  
+  /generateApiKey:
+    x-swagger-router-controller: sc
+    post:
+      summary: Generates users api key.
+      description: Returns contracts transaction on success.
+      operationId: generateKey
+      consumes:
+        - multipart/form-data
+      produces:
+        - application/json
+      parameters:
+        - in: formData
+          name: logo
+          type: file
+          required: true
+          description: PNG file of pixels.
+        - in: formData
+          name: name
+          type: string
+          required: true
+          description: Api key name.
+      responses:
+        201:
+          description: text successfully sent
+        500:
+          description: Internal Server Error
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions

@@ -7,7 +7,7 @@ class SCService {
   constructor() {
     this.SCContract = new SmartContract(SC, process.env.contractAddress);
     this.eventualText = this.SCContract.get('text');
-  }
+  };
 
   /**
    * writes a message on SC contract
@@ -23,7 +23,16 @@ class SCService {
           reject(e)
         });
     });
-  }
+  };
+
+  generateKey(name, logo) {
+    return new Promise((resolve) => {
+      resolve({
+        name: name,
+        logo: logo,
+      });
+    });
+  };
 
   /**
    * returns the text on SC contract
@@ -31,7 +40,7 @@ class SCService {
    */
   get text() {
     return this.eventualText;
-  }
+  };
 }
 
 module.exports = SCService;
