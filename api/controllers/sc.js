@@ -23,8 +23,8 @@ const getText = (req, res) => {
 const generateKey = (req, res) => {
   const sc = new SCService();
   sc.generateKey(req.swagger.params.name.value, req.swagger.params.logo.value)
-    .then(txHash => res.status(201)
-      .send({txHash}))
+    .then(apiKey => res.status(201)
+      .send({apiKey}))
     .catch(e => controllerHelper
       .handleError(error(errors.INTERNAL_SERVER_ERROR, e), res));
 };
