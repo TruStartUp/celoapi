@@ -1,0 +1,1359 @@
+{
+  "contractName": "Hub",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_imgHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "addHashingSpace",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_idx",
+          "type": "uint256"
+        }
+      ],
+      "name": "userHashingSpaces",
+      "outputs": [
+        {
+          "internalType": "contract HashingSpaceStandard",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_imgHash\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"addHashingSpace\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_idx\",\"type\":\"uint256\"}],\"name\":\"userHashingSpaces\",\"outputs\":[{\"internalType\":\"contract HashingSpaceStandard\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/ronaldsg/TRUSTartup/contracts/contracts/Hub.sol\":\"Hub\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/ronaldsg/TRUSTartup/contracts/contracts/HashingSpaceStandard.sol\":{\"keccak256\":\"0x882ef5275361f91f2f061e219025ebc8c50b3e3c1052b1d152df3c3b4351f7ef\",\"urls\":[\"bzz-raw://525329cacaf97dc1aa7b1ddf2829054c85c7944365a4950c2433305f99025440\",\"dweb:/ipfs/QmVi6QwVFYHCPPbcA8CijwoqzY8Q6WsTeGtCVvv8hgqDQX\"]},\"/home/ronaldsg/TRUSTartup/contracts/contracts/Hub.sol\":{\"keccak256\":\"0x24678a3d7bb0e8de160eb102619ff5a016e5a453c3a9074160e7031e1f32fb45\",\"urls\":[\"bzz-raw://17ba9b9eb22e37f46028edc76d81c9ac8bdcfb81becbcc653df614ac65d3f14d\",\"dweb:/ipfs/QmUtM89r3mVoWUtEU8ABXNjquNWqR4H2XuTc7Pb757rLus\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506107f8806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80637dce77271461003b5780638a80d18a146100a9575b600080fd5b6100676004803603602081101561005157600080fd5b810190808035906020019092919050505061016e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61016c600480360360408110156100bf57600080fd5b8101908080359060200190929190803590602001906401000000008111156100e657600080fd5b8201836020820111156100f857600080fd5b8035906020019184600183028401116401000000008311171561011a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101eb565b005b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002082815481106101b957fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600082826040516101fb90610337565b8083815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561023e578082015181840152602081019050610223565b50505050905090810190601f16801561026b5780820380516001836020036101000a031916815260200191505b509350505050604051809103906000f08015801561028d573d6000803e3d6000fd5b5090506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050565b61047f806103458339019056fe608060405234801561001057600080fd5b5060405161047f38038061047f8339818101604052604081101561003357600080fd5b81019080805190602001909291908051604051939291908464010000000082111561005d57600080fd5b8382019150602082018581111561007357600080fd5b825186600182028301116401000000008211171561009057600080fd5b8083526020830192505050908051906020019080838360005b838110156100c45780820151818401526020810190506100a9565b50505050905090810190601f1680156100f15780820380516001836020036101000a031916815260200191505b5060405250505081600081905550806001908051906020019061011592919061019b565b5060008090505b6005811015610193576000805482604051602001808381526020018281526020019250505060405160208183030381529060405280519060200120905060016002600083815260200190815260200160002060006101000a81548160ff02191690831515021790555050808060010191505061011c565b505050610240565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101dc57805160ff191683800117855561020a565b8280016001018555821561020a579182015b828111156102095782518255916020019190600101906101ee565b5b509050610217919061021b565b5090565b61023d91905b80821115610239576000816000905550600101610221565b5090565b90565b6102308061024f6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780632e012698146100c95780635a41c8551461010f575b600080fd5b61004e61012d565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100f5600480360360208110156100df57600080fd5b81019080803590602001909291905050506101cb565b604051808215151515815260200191505060405180910390f35b6101176101f5565b6040518082815260200191505060405180910390f35b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101c35780601f10610198576101008083540402835291602001916101c3565b820191906000526020600020905b8154815290600101906020018083116101a657829003601f168201915b505050505081565b60006002600083815260200190815260200160002060009054906101000a900460ff169050919050565b6000548156fea265627a7a72315820f24446f888def2b9617b759a43139e5a2d7635e2c9533be000939409032f3abb64736f6c63430005100032a265627a7a72315820b6e7c1340f1c4d1a2101ec241852a1f056b59c2a108182cee475e71764169f1e64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80637dce77271461003b5780638a80d18a146100a9575b600080fd5b6100676004803603602081101561005157600080fd5b810190808035906020019092919050505061016e565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b61016c600480360360408110156100bf57600080fd5b8101908080359060200190929190803590602001906401000000008111156100e657600080fd5b8201836020820111156100f857600080fd5b8035906020019184600183028401116401000000008311171561011a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101eb565b005b60008060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002082815481106101b957fe5b9060005260206000200160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600082826040516101fb90610337565b8083815260200180602001828103825283818151815260200191508051906020019080838360005b8381101561023e578082015181840152602081019050610223565b50505050905090810190601f16801561026b5780820380516001836020036101000a031916815260200191505b509350505050604051809103906000f08015801561028d573d6000803e3d6000fd5b5090506000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555050505050565b61047f806103458339019056fe608060405234801561001057600080fd5b5060405161047f38038061047f8339818101604052604081101561003357600080fd5b81019080805190602001909291908051604051939291908464010000000082111561005d57600080fd5b8382019150602082018581111561007357600080fd5b825186600182028301116401000000008211171561009057600080fd5b8083526020830192505050908051906020019080838360005b838110156100c45780820151818401526020810190506100a9565b50505050905090810190601f1680156100f15780820380516001836020036101000a031916815260200191505b5060405250505081600081905550806001908051906020019061011592919061019b565b5060008090505b6005811015610193576000805482604051602001808381526020018281526020019250505060405160208183030381529060405280519060200120905060016002600083815260200190815260200160002060006101000a81548160ff02191690831515021790555050808060010191505061011c565b505050610240565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101dc57805160ff191683800117855561020a565b8280016001018555821561020a579182015b828111156102095782518255916020019190600101906101ee565b5b509050610217919061021b565b5090565b61023d91905b80821115610239576000816000905550600101610221565b5090565b90565b6102308061024f6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806306fdde03146100465780632e012698146100c95780635a41c8551461010f575b600080fd5b61004e61012d565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561008e578082015181840152602081019050610073565b50505050905090810190601f1680156100bb5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100f5600480360360208110156100df57600080fd5b81019080803590602001909291905050506101cb565b604051808215151515815260200191505060405180910390f35b6101176101f5565b6040518082815260200191505060405180910390f35b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101c35780601f10610198576101008083540402835291602001916101c3565b820191906000526020600020905b8154815290600101906020018083116101a657829003601f168201915b505050505081565b60006002600083815260200190815260200160002060009054906101000a900460ff169050919050565b6000548156fea265627a7a72315820f24446f888def2b9617b759a43139e5a2d7635e2c9533be000939409032f3abb64736f6c63430005100032a265627a7a72315820b6e7c1340f1c4d1a2101ec241852a1f056b59c2a108182cee475e71764169f1e64736f6c63430005100032",
+  "sourceMap": "73:470:1:-;;;156:26;8:9:-1;5:2;;;30:1;27;20:12;5:2;156:26:1;73:470;;;;;;",
+  "deployedSourceMap": "73:470:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;73:470:1;;;;;;;;;;;;;;;;;;;;;;;;406:135;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;406:135:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;186:216;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;186:216:1;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;186:216:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;186:216:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;186:216:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;186:216:1;;;;;;;;;;;;;;;:::i;:::-;;406:135;465:20;500:18;:30;519:10;500:30;;;;;;;;;;;;;;;531:4;500:36;;;;;;;;;;;;;;;;;;;;;;;;;493:43;;406:135;;;:::o;186:216::-;263:34;325:8;335:5;300:41;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;300:41:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;300:41:1;263:78;;347:18;:30;366:10;347:30;;;;;;;;;;;;;;;383:13;347:50;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;347:50:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;186:216;;;:::o;73:470::-;;;;;;;;:::o",
+  "source": "pragma solidity >= 0.5.0 < 0.7.0;\n\nimport \"./HashingSpaceStandard.sol\";\n\ncontract Hub {\n  mapping(address => HashingSpaceStandard[]) _userHashingSpaces;\n\n  constructor() public {\n  }\n\n  function addHashingSpace(bytes32 _imgHash, string memory _name) public {\n    HashingSpaceStandard _hashingSpace = new HashingSpaceStandard(_imgHash, _name);\n    _userHashingSpaces[msg.sender].push(_hashingSpace);\n  }\n\n  function userHashingSpaces(uint _idx) public view returns (HashingSpaceStandard) {\n    return _userHashingSpaces[msg.sender][_idx];\n  }\n}\n",
+  "sourcePath": "/home/ronaldsg/TRUSTartup/contracts/contracts/Hub.sol",
+  "ast": {
+    "absolutePath": "/home/ronaldsg/TRUSTartup/contracts/contracts/Hub.sol",
+    "exportedSymbols": {
+      "Hub": [
+        118
+      ]
+    },
+    "id": 119,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 68,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:1"
+      },
+      {
+        "absolutePath": "/home/ronaldsg/TRUSTartup/contracts/contracts/HashingSpaceStandard.sol",
+        "file": "./HashingSpaceStandard.sol",
+        "id": 69,
+        "nodeType": "ImportDirective",
+        "scope": 119,
+        "sourceUnit": 67,
+        "src": "35:36:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          66
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 118,
+        "linearizedBaseContracts": [
+          118
+        ],
+        "name": "Hub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 74,
+            "name": "_userHashingSpaces",
+            "nodeType": "VariableDeclaration",
+            "scope": 118,
+            "src": "90:61:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+              "typeString": "mapping(address => contract HashingSpaceStandard[])"
+            },
+            "typeName": {
+              "id": 73,
+              "keyType": {
+                "id": 70,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "98:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "90:42:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+                "typeString": "mapping(address => contract HashingSpaceStandard[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 71,
+                  "name": "HashingSpaceStandard",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 66,
+                  "src": "109:20:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                    "typeString": "contract HashingSpaceStandard"
+                  }
+                },
+                "id": 72,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "109:22:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_ptr",
+                  "typeString": "contract HashingSpaceStandard[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 77,
+              "nodeType": "Block",
+              "src": "177:5:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 78,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 75,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:2:1"
+            },
+            "returnParameters": {
+              "id": 76,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "177:0:1"
+            },
+            "scope": 118,
+            "src": "156:26:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "257:145:1",
+              "statements": [
+                {
+                  "assignments": [
+                    86
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 86,
+                      "name": "_hashingSpace",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 101,
+                      "src": "263:34:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                        "typeString": "contract HashingSpaceStandard"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 85,
+                        "name": "HashingSpaceStandard",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "263:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 92,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "_imgHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 80,
+                        "src": "325:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 90,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 82,
+                        "src": "335:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 88,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "300:24:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$_t_contract$_HashingSpaceStandard_$66_$",
+                        "typeString": "function (bytes32,string memory) returns (contract HashingSpaceStandard)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 87,
+                        "name": "HashingSpaceStandard",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "304:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "300:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                      "typeString": "contract HashingSpaceStandard"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "263:78:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 98,
+                        "name": "_hashingSpace",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 86,
+                        "src": "383:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 93,
+                          "name": "_userHashingSpaces",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 74,
+                          "src": "347:18:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+                            "typeString": "mapping(address => contract HashingSpaceStandard[] storage ref)"
+                          }
+                        },
+                        "id": 96,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 94,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 170,
+                            "src": "366:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 95,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "366:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "347:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage",
+                          "typeString": "contract HashingSpaceStandard[] storage ref"
+                        }
+                      },
+                      "id": 97,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "347:35:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_HashingSpaceStandard_$66_$returns$_t_uint256_$",
+                        "typeString": "function (contract HashingSpaceStandard) returns (uint256)"
+                      }
+                    },
+                    "id": 99,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "347:50:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "347:50:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addHashingSpace",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 80,
+                  "name": "_imgHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "211:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 79,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "211:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 82,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "229:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "229:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "210:39:1"
+            },
+            "returnParameters": {
+              "id": 84,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "257:0:1"
+            },
+            "scope": 118,
+            "src": "186:216:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 116,
+              "nodeType": "Block",
+              "src": "487:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 109,
+                        "name": "_userHashingSpaces",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 74,
+                        "src": "500:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+                          "typeString": "mapping(address => contract HashingSpaceStandard[] storage ref)"
+                        }
+                      },
+                      "id": 112,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 110,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 170,
+                          "src": "519:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "519:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "500:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage",
+                        "typeString": "contract HashingSpaceStandard[] storage ref"
+                      }
+                    },
+                    "id": 114,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 113,
+                      "name": "_idx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 104,
+                      "src": "531:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "500:36:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                      "typeString": "contract HashingSpaceStandard"
+                    }
+                  },
+                  "functionReturnParameters": 108,
+                  "id": 115,
+                  "nodeType": "Return",
+                  "src": "493:43:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 117,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "userHashingSpaces",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 104,
+                  "name": "_idx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 117,
+                  "src": "433:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 103,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "432:11:1"
+            },
+            "returnParameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 117,
+                  "src": "465:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                    "typeString": "contract HashingSpaceStandard"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 106,
+                    "name": "HashingSpaceStandard",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 66,
+                    "src": "465:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                      "typeString": "contract HashingSpaceStandard"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "464:22:1"
+            },
+            "scope": 118,
+            "src": "406:135:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 119,
+        "src": "73:470:1"
+      }
+    ],
+    "src": "0:544:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ronaldsg/TRUSTartup/contracts/contracts/Hub.sol",
+    "exportedSymbols": {
+      "Hub": [
+        118
+      ]
+    },
+    "id": 119,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 68,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:1"
+      },
+      {
+        "absolutePath": "/home/ronaldsg/TRUSTartup/contracts/contracts/HashingSpaceStandard.sol",
+        "file": "./HashingSpaceStandard.sol",
+        "id": 69,
+        "nodeType": "ImportDirective",
+        "scope": 119,
+        "sourceUnit": 67,
+        "src": "35:36:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          66
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 118,
+        "linearizedBaseContracts": [
+          118
+        ],
+        "name": "Hub",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 74,
+            "name": "_userHashingSpaces",
+            "nodeType": "VariableDeclaration",
+            "scope": 118,
+            "src": "90:61:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+              "typeString": "mapping(address => contract HashingSpaceStandard[])"
+            },
+            "typeName": {
+              "id": 73,
+              "keyType": {
+                "id": 70,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "98:7:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "90:42:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+                "typeString": "mapping(address => contract HashingSpaceStandard[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 71,
+                  "name": "HashingSpaceStandard",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 66,
+                  "src": "109:20:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                    "typeString": "contract HashingSpaceStandard"
+                  }
+                },
+                "id": 72,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "109:22:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_ptr",
+                  "typeString": "contract HashingSpaceStandard[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 77,
+              "nodeType": "Block",
+              "src": "177:5:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 78,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 75,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:2:1"
+            },
+            "returnParameters": {
+              "id": 76,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "177:0:1"
+            },
+            "scope": 118,
+            "src": "156:26:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 101,
+              "nodeType": "Block",
+              "src": "257:145:1",
+              "statements": [
+                {
+                  "assignments": [
+                    86
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 86,
+                      "name": "_hashingSpace",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 101,
+                      "src": "263:34:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                        "typeString": "contract HashingSpaceStandard"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 85,
+                        "name": "HashingSpaceStandard",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "263:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 92,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "_imgHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 80,
+                        "src": "325:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 90,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 82,
+                        "src": "335:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      ],
+                      "id": 88,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "300:24:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$_t_contract$_HashingSpaceStandard_$66_$",
+                        "typeString": "function (bytes32,string memory) returns (contract HashingSpaceStandard)"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 87,
+                        "name": "HashingSpaceStandard",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 66,
+                        "src": "304:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "300:41:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                      "typeString": "contract HashingSpaceStandard"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "263:78:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 98,
+                        "name": "_hashingSpace",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 86,
+                        "src": "383:13:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                          "typeString": "contract HashingSpaceStandard"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 93,
+                          "name": "_userHashingSpaces",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 74,
+                          "src": "347:18:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+                            "typeString": "mapping(address => contract HashingSpaceStandard[] storage ref)"
+                          }
+                        },
+                        "id": 96,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 94,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 170,
+                            "src": "366:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 95,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "366:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "347:30:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage",
+                          "typeString": "contract HashingSpaceStandard[] storage ref"
+                        }
+                      },
+                      "id": 97,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "347:35:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_contract$_HashingSpaceStandard_$66_$returns$_t_uint256_$",
+                        "typeString": "function (contract HashingSpaceStandard) returns (uint256)"
+                      }
+                    },
+                    "id": 99,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "347:50:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 100,
+                  "nodeType": "ExpressionStatement",
+                  "src": "347:50:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 102,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addHashingSpace",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 80,
+                  "name": "_imgHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "211:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 79,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "211:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 82,
+                  "name": "_name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 102,
+                  "src": "229:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "229:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "210:39:1"
+            },
+            "returnParameters": {
+              "id": 84,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "257:0:1"
+            },
+            "scope": 118,
+            "src": "186:216:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 116,
+              "nodeType": "Block",
+              "src": "487:54:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 109,
+                        "name": "_userHashingSpaces",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 74,
+                        "src": "500:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage_$",
+                          "typeString": "mapping(address => contract HashingSpaceStandard[] storage ref)"
+                        }
+                      },
+                      "id": 112,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 110,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 170,
+                          "src": "519:3:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 111,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "519:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "500:30:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_contract$_HashingSpaceStandard_$66_$dyn_storage",
+                        "typeString": "contract HashingSpaceStandard[] storage ref"
+                      }
+                    },
+                    "id": 114,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 113,
+                      "name": "_idx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 104,
+                      "src": "531:4:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "500:36:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                      "typeString": "contract HashingSpaceStandard"
+                    }
+                  },
+                  "functionReturnParameters": 108,
+                  "id": 115,
+                  "nodeType": "Return",
+                  "src": "493:43:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 117,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "userHashingSpaces",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 104,
+                  "name": "_idx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 117,
+                  "src": "433:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 103,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "432:11:1"
+            },
+            "returnParameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 107,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 117,
+                  "src": "465:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                    "typeString": "contract HashingSpaceStandard"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 106,
+                    "name": "HashingSpaceStandard",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 66,
+                    "src": "465:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_HashingSpaceStandard_$66",
+                      "typeString": "contract HashingSpaceStandard"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "464:22:1"
+            },
+            "scope": 118,
+            "src": "406:135:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 119,
+        "src": "73:470:1"
+      }
+    ],
+    "src": "0:544:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "1595010630670": {
+      "events": {},
+      "links": {},
+      "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "transactionHash": "0x8050acfa1b996de2a9f7aabb7c5a91d09ffb183eaea4e1e16b868902525c453e"
+    }
+  },
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-07-22T23:08:37.386Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

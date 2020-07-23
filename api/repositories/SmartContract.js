@@ -1,8 +1,6 @@
-import {config} from 'dotenv';
-import {Transaction} from 'ethereumjs-tx';
+import { config } from 'dotenv';
+import { Transaction } from 'ethereumjs-tx';
 import Web3 from 'web3';
-import Common from 'ethereumjs-common';
-import { newKit } from '@celo/contractkit';
 
 config();
 
@@ -10,15 +8,14 @@ const mnemonic = process.env.mnemonic;
 const privateKey = Buffer.from(mnemonic, 'hex');
 const host = process.env.host || 'http://localhost:8545';
 const account = process.env.account;
-const from = {from: account};
+const from = { from: account };
 
 class SmartContract {
   constructor(contract, address) {
     this.contract = contract;
     this.address = address;
-    this.kit = newKit(host);
-    this.web3 = this.kit.web3;
-    this.instance = new this.web3.eth.Contract(contract.abi, address, {gasLimit: 5000000, ...from});
+    this.web3 = new Web3(new Web3.providers.HttpProvider(host));
+    this.instance = new this.web3.eth.Contract(contract.abi, address, { gasLimit: 5000000, ...from });
   }
 
   /**
@@ -66,15 +63,6 @@ class SmartContract {
    * @returns {Promise<string>} Serialized transaction
    */
   sign(functionAbi, gasLimit) {
-    const customCommon = Common.forCustomChain(
-      'mainnet',
-      {
-        name: 'alfajores',
-        networkId: 44786,
-        chainId: 44786,
-      },
-      'istanbul',
-    )
     return new Promise((resolve, reject) => {
       try {
         this.web3.eth.getGasPrice()
@@ -93,7 +81,7 @@ class SmartContract {
               data: functionAbi,
               nonce,
             };
-            const tx = new Transaction(txParams, {common: customCommon});
+            const tx = new Transaction(txParams);
             tx.sign(privateKey);
             resolve(tx.serialize().toString('hex'));
           })

@@ -19,48 +19,12 @@ consumes:
 produces:
   - application/json
 paths:
-  /scText:
-    x-swagger-router-controller: sc
-    get:
-      tags:
-        - SC
-      summary: Returns the text on SC contract
-      description:  Returns the text on SC contract
-      operationId: getText
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      responses:
-        200:
-          description: text returned
-    post:
-      tags:
-        - SC
-      summary: Allows to add text to SC contract
-      description: Returns transaction hash after sending a Text.
-      operationId: write
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - in: body
-          name: Text
-          description: the text
-          schema:
-            $ref: "#/definitions/Text"
-      responses:
-        201:
-          description: text successfully sent
-        500:
-          description: Internal Server Error
-  /generateApiKey:
-    x-swagger-router-controller: sc
+  /hashingSpace:
+    x-swagger-router-controller: hub
     post:
       summary: Generates users api key.
       description: Returns contracts transaction on success.
-      operationId: generateKey
+      operationId: addHashingSpace
       consumes:
         - multipart/form-data
       produces:
@@ -84,11 +48,3 @@ paths:
   /swagger:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
-definitions:
-  Text:
-    type: object
-    required:
-      - text
-    properties:
-      text:
-        type: string
